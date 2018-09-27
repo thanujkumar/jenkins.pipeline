@@ -3,7 +3,8 @@ pipeline {
     agent any
     stages {
         stage('build') {
-            steps {
+            withMaven(
+               maven: 'maven_3.5.4', mavenLocalRepo: '/maven/repo') {
                 sh 'mvn --version'
             }
         }
