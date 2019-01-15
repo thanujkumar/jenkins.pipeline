@@ -5,7 +5,7 @@ pipeline {
         stage('build') {
             steps {
              withMaven(
-                 maven: 'maven_3.5.4', mavenLocalRepo: '/maven/repo') {
+                 maven: 'maven_3.5.4', mavenLocalRepo: '/m2_repo') {
                 sh 'mvn clean compile'
               }
             }
