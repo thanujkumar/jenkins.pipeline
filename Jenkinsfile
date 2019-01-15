@@ -1,6 +1,8 @@
 pipeline {
     //agent { docker { image 'maven:3.3.3' } }
-    agent {label:'master'}
+    agent {
+        label {'master'}
+     }
     stages {
         stage('build') {
             steps {
