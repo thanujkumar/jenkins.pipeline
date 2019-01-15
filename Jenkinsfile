@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
+                //https://plugins.jenkins.io/pipeline-maven  - this needs pipeline maven plugin
              withMaven(
                  maven: 'maven_3.5.4', mavenLocalRepo: '/m2_repo') {
                 sh 'mvn clean compile'
